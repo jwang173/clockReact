@@ -11,10 +11,13 @@ const time = (props) => {
     // };
 
     return (
-        <div className="Time">
+        <div className="Time" style={{flexWrap:'nowrap',width:'fit-content',display:'inline'}}>
             {/* <p>{props.content}</p> */}
             {/* <p>{props.children}</p> */}
-            <span><input style={{display:'-webkit-inline'}} type="text" value={props.content} onChange={props.change}/></span>
+            
+            <input style={{display:'-webkit-inline',width:'fit-content'}} type="text" value={props.content} onChange={props.change}></input>
+            <span>{props.end}</span>
+            {/* <span value={props.end}></span> */}
         </div>
     )
 }
